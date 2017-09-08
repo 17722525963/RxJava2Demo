@@ -4,10 +4,18 @@
     android:layout_height="match_parent">
 
     <Button
-
-        android:id="@+id/create"
+        android:id="@+id/search"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="create" />
+        android:text="实时搜索案例" />
+
+    <Button
+        android:id="@+id/throttle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="防止按钮重复点击"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/search"
+        android:layout_toEndOf="@+id/search" />
 
 </RelativeLayout>

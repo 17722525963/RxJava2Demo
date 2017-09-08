@@ -24,13 +24,10 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //Rx
-    //注解
-    //EventBus
-    //Retrofit
-    //Base
-//    compile 'com.zhy:autolayout:1.4.3'
+
+    //RxBinding
     //Glide图片加载框架
+    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile 'io.reactivex.rxjava2:rxjava:2.1.2'
