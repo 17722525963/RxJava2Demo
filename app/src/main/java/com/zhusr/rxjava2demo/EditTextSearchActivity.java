@@ -1,12 +1,13 @@
 package com.zhusr.rxjava2demo;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.jakewharton.rxbinding2.widget.RxTextView;
+import com.trello.rxlifecycle2.android.ActivityEvent;
+import com.trello.rxlifecycle2.components.support.RxAppCompatActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +24,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 
-public class EditTextSearchActivity extends AppCompatActivity {
+public class EditTextSearchActivity extends RxAppCompatActivity {
 
     private static final String TAG = "EditTextSearchActivity";
 
@@ -33,6 +34,7 @@ public class EditTextSearchActivity extends AppCompatActivity {
     @BindView(R.id.tvShow)
     TextView show;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +43,8 @@ public class EditTextSearchActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         RxTextView.textChanges(search)
-                .debounce(500,TimeUnit.MILLISECONDS)
-                .throttleWithTimeout(20,TimeUnit.MILLISECONDS)
+                .debounce(500, TimeUnit.MILLISECONDS)
+                .throttleWithTimeout(20, TimeUnit.MILLISECONDS)
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .filter(new Predicate<CharSequence>() {//过滤操作
                     @Override
@@ -73,6 +75,7 @@ public class EditTextSearchActivity extends AppCompatActivity {
                     }
                 })
 //                .subscribeOn(Schedulers.io())
+                .compose(this.<List<String>>bindUntilEvent(ActivityEvent.PAUSE))//手动设置在Activity onPause的时候取消订阅
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<List<String>>() {
                     @Override
@@ -99,4 +102,5 @@ public class EditTextSearchActivity extends AppCompatActivity {
                 });
 
     }
+
 }
