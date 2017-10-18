@@ -67,7 +67,7 @@ public class EditTextSearchActivity extends RxAppCompatActivity {
                     @Override
                     public ObservableSource<List<String>> apply(@NonNull CharSequence charSequence) throws Exception {
                         //模拟查询数据
-                        List<String> list = new ArrayList<String>();
+                        List<String> list = new ArrayList<>();
                         list.add("a");
                         list.add("aa");
                         Log.i(TAG, "apply: " + Thread.currentThread().getName());

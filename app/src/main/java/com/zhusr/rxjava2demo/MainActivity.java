@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.search, R.id.throttle})
+    @OnClick({R.id.search, R.id.throttle, R.id.rxlifecycle_fragment})
     public void click(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.throttle:
                 intent.setClass(this, ThrottleActivity.class);
+                break;
+            case R.id.rxlifecycle_fragment:
+                intent.setClass(this, FragmentRxLifecycleTestActivity.class);
                 break;
         }
         startActivity(intent);
