@@ -39,9 +39,8 @@ public class RxLifeFragment extends RxFragment {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
         RxView.clicks(test)
                 .throttleFirst(2000, TimeUnit.MILLISECONDS)
                 .compose(bindUntilEvent(FragmentEvent.PAUSE))
@@ -66,6 +65,11 @@ public class RxLifeFragment extends RxFragment {
 
                     }
                 });
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
     }
 
 }

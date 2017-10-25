@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".EditTextSearchActivity" />
         <activity android:name=".ThrottleActivity" />
-        <activity android:name=".FragmentRxLifecycleTestActivity"></activity>
+        <activity android:name=".FragmentRxLifecycleTestActivity" />
+        <activity android:name=".MergeActivity"></activity>
     </application>
 
 </manifest>

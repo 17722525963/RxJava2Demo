@@ -4,22 +4,39 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/search"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="实时搜索案例" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/throttle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="防止按钮重复点击" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/rxlifecycle_fragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="rxlifecycle_Fragment中使用" />
 
+            <Button
+                android:id="@+id/search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实时搜索案例" />
+
+            <Button
+                android:id="@+id/throttle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="防止按钮重复点击" />
+
+            <Button
+                android:id="@+id/rxlifecycle_fragment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="rxlifecycle_Fragment中使用" />
+
+            <Button
+                android:id="@+id/rx_merge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="合并数据" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
