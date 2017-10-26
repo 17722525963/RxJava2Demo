@@ -19,7 +19,8 @@
         <activity android:name=".EditTextSearchActivity" />
         <activity android:name=".ThrottleActivity" />
         <activity android:name=".FragmentRxLifecycleTestActivity" />
-        <activity android:name=".MergeActivity"></activity>
+        <activity android:name=".MergeActivity" />
+        <activity android:name=".IntervalActivity"></activity>
     </application>
 
 </manifest>

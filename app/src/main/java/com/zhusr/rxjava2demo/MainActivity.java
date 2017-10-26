@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.search, R.id.throttle, R.id.rxlifecycle_fragment, R.id.rx_merge})
+    @OnClick({R.id.search, R.id.throttle, R.id.rxlifecycle_fragment, R.id.rx_merge, R.id.rx_interval})
     public void click(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -34,6 +34,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.rx_merge:
                 intent.setClass(this, MergeActivity.class);
+                break;
+            case R.id.rx_interval:
+                intent.setClass(this, IntervalActivity.class);
                 break;
         }
         startActivity(intent);

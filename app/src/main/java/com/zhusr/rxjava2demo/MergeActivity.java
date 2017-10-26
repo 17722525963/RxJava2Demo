@@ -4,6 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.trello.rxlifecycle2.android.ActivityEvent;
+import com.trello.rxlifecycle2.components.RxActivity;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +18,7 @@ import io.reactivex.Observer;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 
-public class MergeActivity extends AppCompatActivity {
+public class MergeActivity extends RxActivity {
 
     private List<String> s1 = new ArrayList<>();
     private List<String> s2 = new ArrayList<>();
@@ -76,6 +79,7 @@ public class MergeActivity extends AppCompatActivity {
 //
 //            }
 //        });
+
 
         Observable.concat(o1, o2, o3)
                 .subscribe(new Observer<List<? extends Serializable>>() {
