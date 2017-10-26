@@ -11,6 +11,6 @@ RxJava2.0 学习Demo
 ### 10.25
 1. Merge操作符的使用
 2. Merge操作符与Concat操作符的对比（merge无序、concat有序）
-### 10.16
+### 10.26
 1. 使用Interval、map、take 完成获取验证码倒计时案例
 ==问题：在Onclick中使用RxLifecycle失效==
