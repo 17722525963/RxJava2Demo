@@ -43,6 +43,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="interval、take、map验证码倒计时" />
+
+            <Button
+                android:id="@+id/rx_getappinfo"
+                android:text="学习一、获取手机已安装APP信息"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

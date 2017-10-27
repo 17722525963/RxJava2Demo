@@ -26,3 +26,7 @@ RxJava2.0 学习Demo
 1.  使用Interval、map、take 完成获取验证码倒计时案例
 
     ### 问题：在Onclick中使用RxLifecycle失效
+
+### 2.27
+
+1.  案例一 ： 获取手机已安装的APP并进行展示（create创建获取applicationinfo、map转换为自己需要的数据、filter过滤不需要的数据）

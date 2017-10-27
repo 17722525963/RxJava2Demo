@@ -20,7 +20,8 @@
         <activity android:name=".ThrottleActivity" />
         <activity android:name=".FragmentRxLifecycleTestActivity" />
         <activity android:name=".MergeActivity" />
-        <activity android:name=".IntervalActivity"></activity>
+        <activity android:name=".IntervalActivity" />
+        <activity android:name=".GetAPPInfoActivity"></activity>
     </application>
 
 </manifest>
