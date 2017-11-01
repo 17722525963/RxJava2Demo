@@ -44,7 +44,7 @@ public class EditTextSearchActivity extends RxAppCompatActivity {
 
         RxTextView.textChanges(search)
                 .debounce(500, TimeUnit.MILLISECONDS)
-                .throttleWithTimeout(20, TimeUnit.MILLISECONDS)
+//                .throttleWithTimeout(20, TimeUnit.MILLISECONDS)
                 .subscribeOn(AndroidSchedulers.mainThread())
                 .filter(new Predicate<CharSequence>() {//过滤操作
                     @Override

@@ -46,9 +46,21 @@
 
             <Button
                 android:id="@+id/rx_getappinfo"
-                android:text="学习一、获取手机已安装APP信息"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="学习一、获取手机已安装APP信息" />
+
+            <Button
+                android:id="@+id/scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="scan 操作符" />
+
+            <Button
+                android:id="@+id/groupBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GroupBy 操作符" />
 
         </LinearLayout>
     </ScrollView>
